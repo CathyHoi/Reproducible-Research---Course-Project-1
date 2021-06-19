@@ -15,16 +15,16 @@ summary(data)
 4.	“Plot for Question2” shows time series plot of the average number of steps taken.
 5.	The 5-minute interval that, on average, contains the maximum number of steps is 835
 6.	The code to describe and show a strategy for imputing missing data are:
-# Calculate the total number of missing values
+## Calculate the total number of missing values
 sum(is.na(data$steps))
 
-# Fill in all missing values
+## Fill in all missing values
 imputed_steps <- average_steps$mean[
                       match(data$interval,
                             average_steps$interval)
                       ]
 
-# Create a new dataset with missing data filled in
+## Create a new dataset with missing data filled in
 data_imputed <- transform(data, steps = ifelse(is.na(data$steps), yes = imputed_steps, no = data$steps))
 total_steps_imputed <- aggregate(steps ~ date, data_imputed, sum)
 names(total_steps_imputed) <- c("date", "daily_steps")
