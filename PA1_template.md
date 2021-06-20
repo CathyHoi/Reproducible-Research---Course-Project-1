@@ -10,9 +10,9 @@ data <- cbind(data,weekday)
 
 summary(data)
 
-2.	“Histogram for Question1” shows histogram of the total number of steps taken.
+2.	“Histogram 1” shows histogram of the total number of steps taken.
 3.	Mean and median number of steps taken each day are 9354.23 and 10395, respectively.
-4.	“Plot for Question2” shows time series plot of the average number of steps taken.
+4.	“Plot 1” shows time series plot of the average number of steps taken.
 5.	The 5-minute interval that, on average, contains the maximum number of steps is 835
 6.	The code to describe and show a strategy for imputing missing data are:
 
@@ -35,6 +35,6 @@ total_steps_imputed <- aggregate(steps ~ date, data_imputed, sum)
 
 names(total_steps_imputed) <- c("date", "daily_steps")
 
-7.	“Histogram for Question3” shows histogram of the total number of steps taken each day after missing values are imputed
-8.	“Plots for Question4” shows the panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends
+7.	“Histogram 2” shows histogram of the total number of steps taken each day after missing values are imputed
+8.	“Plot 2” shows the panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends
 9.	The R code provided will be able to reproduce the results in the report. 
